@@ -22,11 +22,11 @@ def ros_main():
     if not os.path.isfile(urdf_file):
         print('couldn\'t find file: ' + urdf_file + '. cartesian moves will be disabled')
         urdf_file = ''
-    arm = controller.add_arm("arm", "xArm-49770F673737-arm.json", urdf_file)
+    arm = controller.add_arm("arm", "../config/xArm-49795F663732-arm.json", urdf_file)
     arm.enable()
     arm.home()
 
-    gripper = controller.add_arm("gripper", "xArm-49770F673737-gripper.json")
+    gripper = controller.add_arm("gripper", "../config/xArm-49795F663732-gripper.json")
     gripper.enable()
     gripper.home()
 
